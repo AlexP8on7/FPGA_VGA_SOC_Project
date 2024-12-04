@@ -18,13 +18,12 @@
             color: white;
             padding: 15px;
             height: 100vh;
-            position: fixed;
-        }
+              }
         .navbar a {
             display: block;
             color: white;
             text-decoration: none;
-            padding: 0px 0;
+            padding: 20px 0;
         }
         .navbar a:hover {
             background-color: #575757;
