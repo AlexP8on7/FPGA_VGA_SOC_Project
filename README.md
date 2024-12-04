@@ -17,7 +17,7 @@
             background-color: #333;
             color: white;
             padding: 15px;
-            height: 1000vh;
+            height: 120vh;
               }
         .navbar a {
             display: block;
