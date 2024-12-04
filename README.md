@@ -23,7 +23,7 @@
             display: block;
             color: white;
             text-decoration: none;
-            padding: 20px 0;
+            padding: 10px 0;
         }
         .navbar a:hover {
             background-color: #575757;
