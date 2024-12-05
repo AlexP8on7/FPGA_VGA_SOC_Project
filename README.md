@@ -59,6 +59,7 @@
         <div class="content">
             <h1 id="introduction">Introduction</h1>
             <p>Welcome to my FPGA VGA Driver Project blog, where I will be presenting my learnings from the System on Chip Design and Verification project. I will be discussing the use of the ( ) chip and how I was able to implement certain methods to display my design on a laboratory monitor.</p>
+            <img src="https://raw.githubusercontent.com/Alexp8on7/FPGA_VGA_SOC_Project/main/images/Device.png">
 
             <h2 id="project-setup">Project Set-Up</h2>
             <p>Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline: 1 short paragraph.</p>
