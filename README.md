@@ -73,15 +73,15 @@
                <p> Both template modules relied on the fundamentals of the VGA interface, which used synchronization signals (HSYNC and VSYNC) and pixel clock timing to control the display. Investigating the template modules, I was then able to begin altering and designing my own VGA design. </p>
 
             <h2 id="simulation">Simulation</h2>
-            <p>The simulation process involves running the Verilog design through a testbench to observe and verify its behavior. The screenshots depict waveform and value traces for signals such as row, col, and RGB outputs (red, green, blue). The simulation highlights how these values evolve over time, as driven by the clk and rst signals.
+            <p>The simulation process involves running the Verilog design through a testbench to observe and verify its behavior. The screenshots below, show waveform and value traces for signals such as row, col, and RGB outputs (red, green, blue). The simulation highlights how these values evolve over time, as driven by the clk and rst signals.
 
-               <p> The waveforms show the proper functioning of the module's color generation and state transitions. For example, the row and col signals increment appropriately, representing the pixel scanning of the VGA interface. The RGB signals (red, green, blue) remain synchronized with the logic and the VGA pixel clock, confirming the correct rendering of colors on a simulated display. Key parameters like HDISP and VDISP are instrumental in defining the active display region, as indicated in the traces.</p>
+               <p> The waveforms show the proper functioning of the module's color generation and state transitions. For example, the row and col signals increment appropriately, representing the pixel scanning of the VGA interface. The RGB signals (red, green, blue) remained synchronized with the logic and the VGA pixel clock, confirming the correct rendering of colors on a simulated display. Key parameters like HDISP and VDISP are instrumental in defining the active display region, as shown in the traces.</p>
                <div style="display: flex; gap: 20px; justify-content: center;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/Sim2.png" alt="Simulation Screenshot 1" style="width: 60%;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/Sim4.png" alt="Simulation Screenshot 2" style="width: 40%;">
             </div>
             <h2 id="synthesis">Synthesis</h2>
-            <p>The synthesis and implementation processes are key stages in digital design and FPGA development.This step optimizes the design for area, speed, and power while preserving functionality. Vivado perform logic minimization and mapping that results in a gate-level representation of the design.
+            <p>The synthesis and implementation processes are key stages in digital design and FPGA development.This part optimizes the design for area, speed, and power while preserving functionality. Vivado performed logic minimization and mapping that results in a gate-level representation of the design.
 
         
                <p> Implementation takes the synthesized netlist and maps it to the physical resources of the FPGA. This includes:
@@ -89,7 +89,7 @@
               <p>Placement: Assigning logical components to specific locations on the FPGA.
                 <p> Routing: Establishing signal connections between components, adhering to timing and resource constraints.
                     <p> Bitstream Generation: Creating a configuration file to program the FPGA.
-                        <p>The uploaded screenshot seems to depict the implementation stage, showing a floorplan view of the FPGA with resource allocation across different regions (e.g., "X0Y0", "X1Y1"). Each colored grid represents a distinct area used for logic or routing.</p>
+                        <p>The uploaded screenshot below, shows the implementation stage of the floorplan view of the FPGA with resource allocation across different regions (e.g., "X0Y0", "X1Y1"). Each colored grid represents a distinct area used for logic or routing.</p>
                         <div style="display: flex; gap: 20px; justify-content: center;">
                             <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/Device.png" alt="Simulation Screenshot 1" style="width: 20%;">
                         </div>
@@ -99,10 +99,10 @@
             <p>My initial idea was to print the four letters of my first name (A, L, E, X). After editing and learning how to use the state machine, I decided to use this technique along with methods utilized in the ColourStripes module to cycle through the four letters. By integrating the state machine, I was able to control the transitions between the letters systematically, ensuring smooth and predictable operation. Additionally, I incorporated features from the ColourStripes module, such as color-cycling and timing logic, to make the display more visually appealing and dynamic. This combination of techniques allowed me to create an interactive and engaging output that effectively demonstrates my understanding of these concepts. </p>
 
             <h2 id="code-adaptation">Code Adaptation</h2>
-            <p>The original code implements a simple color-cycling state machine, transitioning through eight states, each representing a uniform screen color (e.g., BLACK, RED, GREEN). The state transitions are controlled by a counter, and the RGB outputs are derived from a 12-bit color register. The design focuses on basic state machine logic and uniform VGA color rendering.
+            <p>The original code implements a simple colour-cycling state machine, transitioning through eight states, each representing a uniform screen color (e.g., BLACK, RED, GREEN). The state transitions are controlled by a counter, and the RGB outputs are derived from a 12-bit colour register. The design focuses on basic state machine logic and uniform VGA colour rendering.
 
-             <p> The adapted code extends this concept to render the letters "A", "L", "E", and "X" on a VGA display. It introduces a coordinate-based rendering approach using the row and col inputs to define pixel regions for each letter. Each state corresponds to a letter, and specific colors are assigned to different letters (e.g., red for "A", green for "L"). The counter is reused for timing transitions, but the logic integrates dynamic shapes instead of uniform colors. This adaptation transforms the original design from a basic color display into a feature-rich, text-rendering system.
-            <p>My adapted code significantly builds on the original ColourCycle module, transforming the basic color-cycling demonstration into a visually engaging project that combines text rendering, state machine logic, and VGA signal handling.</p>
+             <p> The adapted code extends this concept to render the letters "A", "L", "E", and "X" on a VGA display. It introduces a coordinate-based rendering approach using the row and col inputs to define pixel regions for each letter. Each state corresponds to a letter, and specific colours are assigned to different letters (e.g., red for "A", green for "L"). The counter was reused for timing transitions, but the logic integrates dynamic shapes instead of regular colours. This adaptation transforms the original design from a basic colour display into a  text-rendering system.
+            <p>My adapted code significantly builds on the original ColourCycle module, transforming the basic colour-cycling demonstration into a visually engaging project that combines text rendering, state machine logic, and VGA signal handling.</p>
             <div style="display: flex; gap: 10px; justify-content: center;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/CodePt1.png" alt="Simulation Screenshot 1" style="width: 40%;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/CodePt2.png" alt="Simulation Screenshot 1" style="width: 40%;">
