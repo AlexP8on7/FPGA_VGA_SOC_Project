@@ -115,7 +115,3 @@
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/L.png" alt="Simulation Screenshot 1" style="width: 40%;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/E.png" alt="Simulation Screenshot 1" style="width: 40%;">
                 <img src="https://raw.githubusercontent.com/AlexP8on7/FPGA_VGA_SOC_Project/main/images/X.png" alt="Simulation Screenshot 1" style="width: 40%;"></div>
-        </div>
-    </div>
-</body>
-</html>
